@@ -7,11 +7,11 @@
   --clr-light-200: 300 100% 99%;
   --clr-dark-800: 30 11% 11%;
 
-  --clr-primary-400: 205 58% 52%;
-  --clr-primary-500: 222 82% 21%;
+  --clr-primary-400: 213 100% 98%;
+  --clr-primary-500: 224 30% 62%;
 
-  --clr-secondary-400: 346 68% 52%;
-  --clr-secondary-500: 346 68% 32%;
+  --clr-secondary-400: 167 39% 93%;
+  --clr-secondary-500: 145 87% 31%;
 
   --fs-200: 0.875rem;
   --fs-300: 1rem;
@@ -225,7 +225,7 @@ select {
 }
 
 /* ------------------ */
-/* Components   */
+/* Components         */
 /* ------------------ */
 
 /* header */
@@ -234,6 +234,11 @@ select {
   min-width: 2rem;
   align-items: center;
   --gap: 0.1rem;
+  opacity: 0.85;
+}
+
+.logo:hover {
+  opacity: 1;
 }
 
 .header {
@@ -245,7 +250,6 @@ select {
 .navigation {
   --gap: clamp(1.25rem, 4.75vw, 3.25rem);
 
-  list-style: none;
   letter-spacing: 0.25rem;
 
   padding: 0;
@@ -258,46 +262,32 @@ select {
   color: hsl(var(--clr-dark-800));
 }
 
-.nav-toggle {
-  display: none;
+.hover-underline {
+  display: inline-block;
+  position: relative;
+  color: hsl(var(--clr-dark-800));
 }
 
-@media (max-width: 35em) {
-  .navigation {
-    --gap: 2em;
+.hover-underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(var(--clr-dark-800));
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
 
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 35%;
-    flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
+.hover-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-    transform: translateX(100%);
-    transition: transform 350ms ease-out;
-
-    background: hsl(var(--clr-primary-400));
-  }
-
-  .navigation a {
-    color: hsl(var(--clr-light-200));
-  }
-
-  .navigation[data-visible='true'] {
-    transform: translateX(0%);
-  }
-
-  .nav-toggle {
-    background: url(./images/burger.png) transparent no-repeat center;
-
-    display: block;
-    position: absolute;
-    top: center;
-    right: 2rem;
-    z-index: 9999;
-    width: 2.2rem;
-    border: 0;
-    aspect-ratio: 1;
-  }
+.nav-toggle {
+  display: none;
 }
 
 .nav-toggle[aria-expanded='true'] {
@@ -311,7 +301,6 @@ select {
   gap: 1.25rem;
   grid-auto-columns: 1fr;
   grid-template-areas:
-    'zero'
     'one'
     'two'
     'three'
@@ -320,6 +309,26 @@ select {
 
   width: min(95%, 70rem);
   margin-inline: auto;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
 }
 
 .article {
@@ -347,24 +356,96 @@ select {
   line-height: 1rem;
 }
 
-.one {
-  grid-area: one;
+/* footer */
+
+.footer-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'left'
+    'right'
+    'bottom';
+
+  width: min(95%, 70rem);
+  margin-top: 1.25rem;
+  margin-inline: auto;
+  padding: 1.25rem 0;
 }
 
-.two {
-  grid-area: two;
+.left {
+  grid-area: left;
 }
 
-.three {
-  grid-area: three;
+.right {
+  grid-area: right;
 }
 
-.four {
-  grid-area: four;
+.bottom {
+  grid-area: bottom;
 }
 
-.five {
-  grid-area: five;
+.social-media a,
+.legal-and-privacy a {
+  text-decoration: none;
+  display: flex;
+  opacity: 0.8;
+  filter: invert(100%);
+  color: hsl(var(--clr-dark-800));
+}
+
+.social-media a:hover,
+.legal-and-privacy a:hover {
+  opacity: 1;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright a {
+  color: hsl(var(--clr-light-200));
+}
+
+/* ------------------ */
+/* Media              */
+/* ------------------ */
+
+@media (max-width: 35em) {
+  .navigation {
+    --gap: 2em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 35%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+
+    background: hsl(var(--clr-primary-500));
+  }
+
+  .navigation a {
+    color: hsl(var(--clr-light-200));
+  }
+
+  .navigation[data-visible='true'] {
+    transform: translateX(0%);
+  }
+
+  .nav-toggle {
+    background: url(./images/burger.png) transparent no-repeat center;
+
+    display: block;
+    position: absolute;
+    right: 2rem;
+    z-index: 9999;
+    width: 2.2rem;
+    border: 0;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 @media screen and (min-width: 33em) {
@@ -374,6 +455,12 @@ select {
       'two three'
       'five five'
       'four four';
+  }
+
+  .footer-grid {
+    grid-template-areas:
+      'left right'
+      'bottom bottom';
   }
 }
 

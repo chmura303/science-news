@@ -31,12 +31,13 @@
         <ul
           data-visible="false"
           class="navigation flex uppercase fw-700 fs-600"
+          role="list"
           aria-label="Main"
         >
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./space.html">Space</a></li>
-          <li><a href="./nature.html">Nature</a></li>
-          <li><a href="./mind.html">Mind</a></li>
+          <li><a href="./index.html" class="hover-underline">Home</a></li>
+          <li><a href="./space.html" class="hover-underline">Space</a></li>
+          <li><a href="./nature.html" class="hover-underline">Nature</a></li>
+          <li><a href="./mind.html" class="hover-underline">Mind</a></li>
         </ul>
       </nav>
 
@@ -52,12 +53,12 @@
         <div>
           <img
             src="./images/orca.jpg"
-            alt="killer whale swimming together with a baby pilot whale"
+            alt="killer whale swimming together with its baby"
           />
         </div>
         <div>
           <p>Nature</p>
-          <h2>Orca seen foster parenting a pilot whale calf for first time</h2>
+          <h2>How killer whales are like people</h2>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut nobis
             minima odit quibusdam ducimus inventore culpa maiores eius rem sit!
@@ -67,7 +68,7 @@
         </div>
       </article>
 
-      <article class="two article bg-primary-400 text-light-200">
+      <article class="two article bg-primary-400 text-dark-800">
         <div>
           <img src="./images/rocket.jpg" alt="rocket during its lift off" />
         </div>
@@ -87,13 +88,16 @@
       <article class="three article bg-light-100">
         <div>
           <img
-            src="./images/orca.jpg"
-            alt="killer whale swimming together with a baby pilot whale"
+            src="./images/cat.jpg"
+            alt="fluffy cat staring directly at you"
           />
         </div>
         <div>
           <p>Nature</p>
-          <h2>Orca seen foster parenting a pilot whale calf for first time</h2>
+          <h2>
+            The truth about cats' domestication and why they really quite like
+            us
+          </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
             perferendis hic ipsum cupiditate, voluptatum, rerum vero enim
@@ -103,14 +107,17 @@
         </div>
       </article>
 
-      <article class="four article bg-secondary-500 text-light-200">
+      <article class="four article bg-secondary-400 text-dark-800">
         <div>
-          <img src="./images/rocket.jpg" alt="rocket during its lift off" />
+          <img
+            src="./images/test.jpg"
+            alt="psychological test with ink spilled on a sheet of paper"
+          />
         </div>
         <div>
-          <p>Nature</p>
+          <p>Mind</p>
           <h2>
-            New Japanese Rocket Is Destroyed During First Test Flight to Space
+            Controversial psychology tests are often still used in US courts
           </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -123,12 +130,16 @@
 
       <article class="five article bg-light-100">
         <div>
-          <img src="./images/rocket.jpg" alt="space rocket during take-off" />
+          <img
+            src="./images/moon.jpg"
+            alt="half moon visible in the night sky"
+          />
         </div>
         <div>
-          <p>Nature</p>
+          <p>Space</p>
           <h2>
-            New Japanese Rocket Is Destroyed During First Test Flight to Space
+            The moon may be made of magma that once covered Earth’s entire
+            surface
           </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quae
@@ -145,6 +156,43 @@
       </article>
     </main>
 
-    <footer></footer>
+    <footer class="footer-grid bg-dark-800 text-light-200">
+      <ul class="left social-media" role="list">
+        <li class="uppercase fw-700">Find us on social media</li>
+        <li>
+          <a href="#"
+            ><img
+              src="./images/instagram.png"
+              alt="instagram logo"
+            />&nbsp;Instagram</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./images/facebook.png" alt="facebook logo" />
+            &nbsp;Facebook</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./images/twitter.png" alt="twitter logo" />
+            &nbsp;Twitter</a
+          >
+        </li>
+      </ul>
+
+      <ul class="right legal-and-privacy" role="list">
+        <li class="uppercase fw-700">Legal and privacy</li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+
+      <div class="bottom copyright">
+        &copy; Paul Chmura 2023; Images by
+        <a href="https://www.pexels.com/">Pexels</a>; Icons by
+        <a href="https://icons8.com/">Icons8</a>
+      </div>
+    </footer>
   </body>
 </html>
