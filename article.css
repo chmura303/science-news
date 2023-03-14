@@ -18,9 +18,11 @@
   --fs-300: 0.875rem;
   --fs-400: 0.9375rem;
   --fs-500: 1.125rem;
-  --fs-600: 1.5rem;
+  --fs-600: 1.2rem;
   --fs-700: 1.75rem;
+  --fs-750: 2.5rem;
   --fs-800: 3.5rem;
+  --fs-850: 4.5rem;
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 
   --ff-primary: 'Quicksand', sans-serif;
@@ -317,7 +319,7 @@ select {
   grid-area: zero;
 }
 
-.article h2 {
+.article h1 {
   padding-top: 1rem;
   line-height: 2rem;
   font-family: var(--ff-decorative);
@@ -346,6 +348,11 @@ select {
   initial-letter: 3;  
 }
 
+.quotation-mark {
+  width: 90px;
+  height: 106px;
+}
+
 .quotation {
   align-items: center;
   opacity: 0.9;
@@ -366,6 +373,7 @@ select {
 
 .author {
   padding: 1rem 0;
+  align-items: center;
 }
 
 .date {
@@ -507,14 +515,36 @@ select {
   }
 }
 
-@media screen and (min-width: 54em) {
+@media screen and (min-width: 37.5em) {
   .main-grid {
     grid-template-areas: 'zero zero';
   }
-}
 
-@media screen and (min-width: 75em) {
-  .main-grid {
-    grid-template-areas: 'zero zero';
+  .article h1 {
+    padding-top: 1.5rem;
+    line-height: 2.875rem;
+    font-size: var(--fs-750);
+  }
+
+  .article p {
+    font-size: var(--fs-500)
+  }
+
+  .article p.subhead {
+    padding: 1.5rem 0;
+    font-size: var(--fs-600);
+  }
+
+  .first-line::first-letter {
+    font-size: var(--fs-850);
+  }
+
+  .quotation-mark {
+    width: 100px;
+    height: 116px;
+  }
+
+  .quotation p {
+    font-size: var(--fs-750);
   }
 }

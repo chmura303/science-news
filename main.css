@@ -431,6 +431,12 @@ select {
   text-align: center;
 }
 
+.copyright a {
+  text-decoration: none;
+  opacity: 0.8;
+  color: hsl(var(--clr-dark-800));
+}
+
 .hr-double-02 {
   border-left: 0;
   border-right: 0;
