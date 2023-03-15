@@ -302,6 +302,7 @@ select {
 
 .main-grid {
   display: grid;
+  align-content: baseline;
   gap: 1.25rem;
   grid-auto-columns: 1fr;
   grid-template-areas:
@@ -382,6 +383,15 @@ select {
   line-height: 1.25rem;
 }
 
+.hr-double-02 {
+  border-left: 0;
+  border-right: 0;
+  height: 14px;
+  border-top: 6px solid hsl(var(--clr-dark-800));
+  border-bottom: 2px solid hsl(var(--clr-dark-800));
+  opacity: 0.9;
+}
+
 /* footer */
 
 .footer-grid {
@@ -435,14 +445,6 @@ select {
   text-decoration: none;
   opacity: 0.8;
   color: hsl(var(--clr-dark-800));
-}
-
-.hr-double-02 {
-  border-left: 0;
-  border-right: 0;
-  height: 14px;
-  border-top: 6px solid hsl(var(--clr-dark-800));
-  border-bottom: 2px solid hsl(var(--clr-dark-800));
 }
 
 .hr-single-01 {
@@ -507,7 +509,7 @@ select {
   .footer-grid {
     grid-template-areas:
       '.. left right ..'
-      '.. bottom bottom ..';
+      'bottom bottom bottom bottom';
   }
 }
 
@@ -519,6 +521,12 @@ select {
       'five five five'
       'three four four';
   }
+
+  .footer-grid {
+    grid-template-areas:
+      '.. left right ..'
+      'bottom bottom bottom bottom';
+  }
 }
 
 @media screen and (min-width: 75em) {
@@ -527,5 +535,11 @@ select {
       'zero zero zero zero'
       'one one two five'
       'three four four five';
+  }
+
+  .footer-grid {
+    grid-template-areas:
+      '.. left right ..'
+      'bottom bottom bottom bottom';
   }
 }

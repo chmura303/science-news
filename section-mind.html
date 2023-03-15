@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom css -->
+    <title>Science News | Home</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./section.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <header class="header flex">
+      <div class="logo flex ff-decorative fs-700 fw-700">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="science news logo" />
+        </a>
+        <p>ScienceNews</p>
+      </div>
+
+      <nav>
+        <ul
+          data-visible="false"
+          class="navigation flex uppercase fw-700 fs-500"
+          role="list"
+          aria-label="Main"
+        >
+          <li><a href="./index.html" class="hover-underline">Home</a></li>
+          <li>
+            <a href="./section-space.html" class="hover-underline">Space</a>
+          </li>
+          <li>
+            <a href="./section-nature.html" class="hover-underline">Nature</a>
+          </li>
+          <li>
+            <a href="./section-mind.html" class="hover-underline">Mind</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        aria-expanded="false"
+        class="nav-toggle"
+        aria-label="Open the menu"
+      ></button>
+    </header>
+
+    <main class="main-grid">
+      <article class="zero article bg-light-100 text">
+        <a href="./mind-article-test.html">
+          <div>
+            <img
+              src="./images/small-test.jpg"
+              alt="rocket during its lift off"
+            />
+          </div>
+          <div>
+            <p>Space</p>
+            <h2>
+              Controversial psychology tests are often still used in US courts
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus quaerat temporibus, ipsa nihil, veritatis eligendi
+              id, velit eaque quo ipsam praesentium iure ea eveniet quas. Alias
+              molestias mollitia sequi consequatur!
+            </p>
+          </div>
+        </a>
+      </article>
+    </main>
+
+    <footer class="footer-grid text-dark-800">
+      <ul class="one left social-media" role="list">
+        <li class="uppercase fw-700">Find us on social media</li>
+        <li>
+          <a href="#"
+            ><img
+              src="./images/instagram.png"
+              alt="instagram logo"
+            />&nbsp;Instagram</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./images/facebook.png" alt="facebook logo" />
+            &nbsp;Facebook</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./images/twitter.png" alt="twitter logo" />
+            &nbsp;Twitter</a
+          >
+        </li>
+      </ul>
+
+      <ul class="right legal-and-privacy" role="list">
+        <li class="uppercase fw-700">Legal and privacy</li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+
+      <div class="bottom copyright text-dark-800">
+        <hr class="hr-single-01" />
+        &copy; Coleslaw 2023; Images by
+        <a href="https://www.pexels.com/">Pexels</a>; Icons by
+        <a href="https://icons8.com/">Icons8</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -18,11 +18,9 @@
   --fs-300: 0.875rem;
   --fs-400: 0.9375rem;
   --fs-500: 1.125rem;
-  --fs-600: 1.2rem;
+  --fs-600: 1.5rem;
   --fs-700: 1.75rem;
-  --fs-750: 2.5rem;
   --fs-800: 3.5rem;
-  --fs-850: 4.5rem;
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 
   --ff-primary: 'Quicksand', sans-serif;
@@ -185,9 +183,6 @@ select {
 
 /* font sizes */
 
-.fs-100 {
-  font-size: var(--fs-100);
-}
 .fs-200 {
   font-size: var(--fs-200);
 }
@@ -307,11 +302,14 @@ select {
 
 .main-grid {
   display: grid;
+  align-content: baseline;
   gap: 1.25rem;
   grid-auto-columns: 1fr;
-  grid-template-areas: 'zero';
+  grid-template-areas:
+    'zero'
+    'one';
 
-  width: min(95%, 37.5rem);
+  width: min(95%, 70rem);
   margin-inline: auto;
 }
 
@@ -319,87 +317,51 @@ select {
   grid-area: zero;
 }
 
-.article h1 {
-  padding-top: 1rem;
-  line-height: 2rem;
-  font-family: var(--ff-decorative);
+.one {
+  grid-area: one;
+}
+
+.article {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  box-shadow: hsl(var(--clr-dark-800) / 0.5) 2.5rem 3.75rem 3rem -3rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.article:hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.article img {
+  border-radius: 0.4rem;
+  margin: 0 0.75rem 0 0;
 }
 
 .article p:first-of-type {
-  padding: 1rem 0;
+  font-weight: var(--fw-700);
 }
 
 .article a {
-  box-shadow: inset 0 0 0 0 hsl(var(--clr-primary-500));
-  color: hsl(var(--clr-primary-500));
-  padding: 0 .25rem;
-  margin: 0 -.25rem;
-  transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
 }
 
-.article a:hover {
-  color: hsl(var(--clr-light-100));
-  box-shadow: inset 200px 0 0 0 hsl(var(--clr-primary-500))
+.article h2 {
+  padding-top: 0.5rem;
+  line-height: 1.5rem;
+  font-family: var(--ff-decorative);
 }
 
-.first-line::first-letter {
-  float: left;
-  font-size: var(--fs-800);
-  initial-letter: 3;  
+.article h2:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.quotation-mark {
-  width: 90px;
-  height: 106px;
-}
-
-.quotation {
-  align-items: center;
-  opacity: 0.9;
-  font-style: italic;
-}
-
-.about-author {
-  margin: 1.5rem 0;
-}
-
-.large-photo {
-  margin-inline: auto;
-}
-
-.figcaption {
-  opacity: 0.6;
-}
-
-.author {
-  padding: 1rem 0;
-  align-items: center;
-}
-
-.date {
-  font-style: italic;
-}
-
-.author-photo {
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 50%;
-  filter: grayscale(100%);
-}
-
-.article p:not(:first-of-type) {
-  padding: 0.25rem 0;
-}
-
-.hr-double-01 {
-  border: none;
-  height: 10px;
-  background: linear-gradient(-135deg, hsl(var(--clr-light-100)) 5px, transparent 0) 0 5px, linear-gradient(135deg, hsl(var(--clr-light-100)) 5px, hsl(var(--clr-dark-800)) 0) 0 5px;
-  background-color: hsl(var(--clr-light-100));
-  opacity: 0.4;
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 10px 10px;
+.article p:last-of-type {
+  padding-top: 0.5rem;
+  line-height: 1.25rem;
 }
 
 /* footer */
@@ -457,6 +419,14 @@ select {
   color: hsl(var(--clr-dark-800));
 }
 
+.hr-double-02 {
+  border-left: 0;
+  border-right: 0;
+  height: 14px;
+  border-top: 6px solid hsl(var(--clr-dark-800));
+  border-bottom: 2px solid hsl(var(--clr-dark-800));
+}
+
 .hr-single-01 {
   opacity: 0.4;
 }
@@ -500,50 +470,26 @@ select {
     border: 0;
     aspect-ratio: 1 / 1;
   }
+
+  .article img {
+    margin-inline: auto;
+  }
 }
 
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 36.25em) {
   .main-grid {
-    grid-template-areas: 'zero zero';
+    grid-template-areas:
+      'zero zero'
+      'one one';
+  }
+
+  .article img {
+    float: left;
   }
 
   .footer-grid {
     grid-template-areas:
       '.. left right ..'
       'bottom bottom bottom bottom';
-  }
-}
-
-@media screen and (min-width: 37.5em) {
-  .main-grid {
-    grid-template-areas: 'zero zero';
-  }
-
-  .article h1 {
-    padding-top: 1.5rem;
-    line-height: 2.875rem;
-    font-size: var(--fs-750);
-  }
-
-  .article p {
-    font-size: var(--fs-500)
-  }
-
-  .article p.subhead {
-    padding: 1.5rem 0;
-    font-size: var(--fs-600);
-  }
-
-  .first-line::first-letter {
-    font-size: var(--fs-850);
-  }
-
-  .quotation-mark {
-    width: 100px;
-    height: 116px;
-  }
-
-  .quotation p {
-    font-size: var(--fs-750);
   }
 }
