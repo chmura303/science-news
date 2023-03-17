@@ -528,23 +528,11 @@ select {
     }
   }
 
-  .footer-grid {
-    grid-template-areas:
-      '.. left right ..'
-      'bottom bottom bottom bottom';
-  }
-
 @media screen and (min-width: 75em) {
   .main-grid {
     grid-template-areas:
       'zero zero zero zero'
       'one one two five'
       'three four four five';
-  }
-
-  .footer-grid {
-    grid-template-areas:
-      '.. left right ..'
-      'bottom bottom bottom bottom';
   }
 }
