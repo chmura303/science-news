@@ -323,8 +323,9 @@ select {
 
 .contact  {  
   border: 0;
-  border-bottom: 1px solid currentColor;
+  /* border-bottom: 1px solid currentColor; */
   padding: 0.25em;
+  border-radius: 0.4rem;
 }
 
 .article h1 {
