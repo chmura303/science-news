@@ -11,16 +11,18 @@
   --clr-primary-500: 224 30% 62%;
 
   --clr-secondary-400: 167 39% 93%;
-  --clr-secondary-500: 145 87% 31%;
+  --clr-secondary-500: 149 72% 53%;
 
   --fs-100: 0.626rem
   --fs-200: 0.75rem;
   --fs-300: 0.875rem;
   --fs-400: 0.9375rem;
   --fs-500: 1.125rem;
-  --fs-600: 1.5rem;
+  --fs-600: 1.2rem;
   --fs-700: 1.75rem;
+  --fs-750: 2.5rem;
   --fs-800: 3.5rem;
+  --fs-850: 4.5rem;
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 
   --ff-primary: 'Quicksand', sans-serif;
@@ -75,7 +77,6 @@ html:focus-within {
 body {
   display: grid;
   grid-template-rows: min-content 1fr;
-  place-content: center;
   max-width: 1200px;
   margin-inline: auto;
 
@@ -183,6 +184,9 @@ select {
 
 /* font sizes */
 
+.fs-100 {
+  font-size: var(--fs-100);
+}
 .fs-200 {
   font-size: var(--fs-200);
 }
@@ -302,18 +306,11 @@ select {
 
 .main-grid {
   display: grid;
-  align-content: baseline;
   gap: 1.25rem;
   grid-auto-columns: 1fr;
-  grid-template-areas:
-    'zero'
-    'one'
-    'two'
-    'three'
-    'four'
-    'five';
+  grid-template-areas: 'zero';
 
-  width: min(95%, 70rem);
+  width: min(95%, 37.5rem);
   margin-inline: auto;
 }
 
@@ -321,75 +318,60 @@ select {
   grid-area: zero;
 }
 
-.one {
-  grid-area: one;
-}
-
-.two {
-  grid-area: two;
-}
-
-.three {
-  grid-area: three;
-}
-
-.four {
-  grid-area: four;
-}
-
-.five {
-  grid-area: five;
-}
-
 .article {
-  padding: 0.5rem;
-  border-radius: 0.4rem;
-  box-shadow: hsl(var(--clr-dark-800) / 0.5) 2.5rem 3.75rem 3rem -3rem;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  background-color: transparent; 
 }
 
-.article:not(:first-child):hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+.contact  {  
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  padding: 0.25em;
 }
 
-.article img {
-  border-radius: 0.4rem;
+.article h1 {
+  padding-top: 1rem;
+  line-height: 2rem;
+  font-family: var(--ff-decorative);
+  text-align: center;
 }
 
 .article p:first-of-type {
-  font-weight: var(--fw-700);
+  padding: 1rem 0;
+  text-align: center;
 }
 
-.article a {
-  text-decoration: none;
-  color: inherit;
+label {
+  display: block;
 }
 
-.article h2 {
-  padding-top: 0.5rem;
-  line-height: 1.5rem;
-  font-family: var(--ff-decorative);
+label:where(:not(:first-of-type)) {
+  padding-top: 1rem;
 }
 
-.article h2:hover {
+#contact-message {
+  width: 100%;
+  min-height: 12rem;
+}
+
+.btn-send-message {
+  margin-top: 2rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 30px;
+  border: 2px solid hsl(var(--clr-secondary-500));
+  background: hsl(var(--clr-light-100));
+  color: hsl(var(--clr-secondary-500));
+
   cursor: pointer;
-  text-decoration: underline;
+  transition: 0.2s;
 }
 
-.article p:last-of-type {
-  padding-top: 0.5rem;
-  line-height: 1.25rem;
+.btn-send-message:hover {
+  background: hsl(var(--clr-secondary-500));
+  color: hsl(var(--clr-light-100));
 }
 
-.hr-double-02 {
-  border-left: 0;
-  border-right: 0;
-  height: 14px;
-  border-top: 6px solid hsl(var(--clr-dark-800));
-  border-bottom: 2px solid hsl(var(--clr-dark-800));
-  opacity: 0.9;
+.btn-send-message:focus {
+  opacity: 0.65;
 }
 
 /* footer */
@@ -456,10 +438,16 @@ select {
 /* ------------------ */
 
 @media (max-width: 43.5em) {
+  body {
+    background-image: url('./images/small-bacteria.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 95% 35%;
+  }
+
   .logo-title {
     display: none;
   }
-
   .navigation {
     --gap: 2em;
 
@@ -494,21 +482,12 @@ select {
     border: 0;
     aspect-ratio: 1 / 1;
   }
-
-  .article img {
-    margin-inline: auto;
-  }
 }
 
 @media screen and (min-width: 33em) {
-
+  
   .main-grid {
-    grid-template-areas:
-      'zero zero'
-      'one one'
-      'two three'
-      'five five'
-      'four four';
+    grid-template-areas: 'zero zero';
   }
 
   .footer-grid {
@@ -518,33 +497,25 @@ select {
   }
 }
 
-@media screen and (min-width: 54em) {
+@media screen and (min-width: 37.5em) {
+  body {
+    background-image: url('./images/large-bacteria01.png');
+    background-repeat: no-repeat;
+    background-position: 120% 40%;
+    background-size: 50%;
+  }
+
   .main-grid {
-    grid-template-areas:
-      'zero zero zero'
-      'one one two'
-      'five five five'
-      'three four four';
-    }
+    grid-template-areas: 'zero zero';
   }
 
-  .footer-grid {
-    grid-template-areas:
-      '.. left right ..'
-      'bottom bottom bottom bottom';
+  .article h1 {
+    padding-top: 1.5rem;
+    line-height: 2.875rem;
+    font-size: var(--fs-750);
   }
 
-@media screen and (min-width: 75em) {
-  .main-grid {
-    grid-template-areas:
-      'zero zero zero zero'
-      'one one two five'
-      'three four four five';
-  }
-
-  .footer-grid {
-    grid-template-areas:
-      '.. left right ..'
-      'bottom bottom bottom bottom';
+  .article p {
+    font-size: var(--fs-500)
   }
 }

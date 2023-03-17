@@ -15,8 +15,8 @@
     <!-- Custom css -->
     <title>Science News | Home</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./section.css" />
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./contact-us.css" />
+    <script src="./contact-us.js" defer></script>
   </head>
   <body>
     <header class="header flex">
@@ -55,50 +55,59 @@
     </header>
 
     <main class="main-grid">
-      <article class="zero article bg-light-100 text">
-        <a href="./space-article-rocket.html">
-          <div>
-            <img
-              src="./images/small-rocket.jpg"
-              alt="rocket during its lift off"
-            />
-          </div>
-          <div>
-            <p>Space</p>
-            <h2>
-              New Japanese Rocket Is Destroyed During First Test Flight to Space
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-              officia exercitationem, quia ducimus consectetur iusto reiciendis,
-              hic optio similique eos voluptate culpa consequatur.
-            </p>
-          </div>
-        </a>
-      </article>
+      <article class="zero article bg-light-200 text-dark-800">
+        <h1 class="fs-700">Contact us</h1>
+        <p class="subhead fw-700 fs-500">
+          Any question or remarks? Just write us a message!
+        </p>
 
-      <article class="one article bg-light-100">
-        <a href="./space-article-moon.html">
+        <form id="contact-form">
+          <label for="contact-name">Name:</label>
+          <input
+            type="text"
+            name="contact-name"
+            class="contact"
+            id="contact-name"
+            placeholder="Enter your name"
+          />
+
+          <label for="contact-email">Email:</label>
+          <input
+            type="email"
+            name="contact-email"
+            class="contact"
+            id="contact-email"
+            placeholder="Enter your email"
+          />
+
+          <label for="contact-phone">Phone:</label>
+          <input
+            type="tel"
+            name="contact-phone"
+            class="contact"
+            id="contact-phone"
+            placeholder="Enter your phone number"
+            pattern="[0-9\-]*"
+            value=""
+            required=""
+          />
+
+          <label for="contact-message">Message:</label>
+          <textarea
+            name="message"
+            class="contact"
+            id="contact-message"
+            placeholder="Enter your message"
+          ></textarea>
+
           <div>
-            <img
-              src="./images/small-moon.jpg"
-              alt="half moon visible in the night sky"
+            <input
+              class="btn btn-send-message fw-700"
+              type="submit"
+              value="Send Message"
             />
           </div>
-          <div>
-            <p>Space</p>
-            <h2>
-              The moon may be made of magma that once covered Earth’s entire
-              surface
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quae
-              facilis animi doloribus omnis, similique voluptas, eos asperiores
-              perferendis vitae distinctio. Non nobis, natus voluptatibus at
-              officia voluptatum tempore eligendi earum.
-            </p>
-          </div>
-        </a>
+        </form>
       </article>
     </main>
 

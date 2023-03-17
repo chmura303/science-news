@@ -465,7 +465,10 @@ select {
 /* Media              */
 /* ------------------ */
 
-@media (max-width: 35em) {
+@media (max-width: 43.5em) {
+  .logo-title {
+    display: none;
+  }
   .navigation {
     --gap: 2em;
 
@@ -490,7 +493,7 @@ select {
   }
 
   .nav-toggle {
-    background: url(./images/burger.png) transparent no-repeat center;
+    background: url('./images/burger.png') transparent no-repeat center;
 
     display: block;
     position: absolute;
@@ -503,6 +506,7 @@ select {
 }
 
 @media screen and (min-width: 33em) {
+  
   .main-grid {
     grid-template-areas: 'zero zero';
   }
