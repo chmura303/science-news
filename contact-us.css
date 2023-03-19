@@ -482,6 +482,10 @@ label:where(:not(:first-of-type)) {
     position: fixed;
   }
 
+  .hover-underline:hover:after {
+    display: none;
+  }
+
   .current {
     border-bottom: none;
   }
