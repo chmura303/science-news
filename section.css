@@ -269,6 +269,10 @@ select {
   color: hsl(var(--clr-dark-800));
 }
 
+.current {
+  border-bottom: 2px solid hsl(var(--clr-dark-800));
+}
+
 .hover-underline {
   display: inline-block;
   position: relative;
@@ -281,7 +285,7 @@ select {
   width: 100%;
   transform: scaleX(0);
   height: 1.5px;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   background-color: hsl(var(--clr-dark-800));
   transform-origin: bottom right;
@@ -465,6 +469,16 @@ select {
 
   .navigation[data-visible='true'] {
     transform: translateX(0%);
+  }
+
+  .nav-toggle[aria-expanded='true'] {
+    background: url(./images/close.png) no-repeat center;
+    filter: invert(100%);
+    position: fixed;
+  }
+
+  .current {
+    border-bottom: none;
   }
 
   .nav-toggle {
