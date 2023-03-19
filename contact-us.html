@@ -12,9 +12,35 @@
       rel="stylesheet"
     />
 
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
     <!-- Custom css -->
     <title>Sonic Hedgehog | Home</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./contact-us.css" />
     <script src="./contact-us.js" defer></script>
   </head>
@@ -69,6 +95,7 @@
             class="contact"
             id="contact-name"
             placeholder="e.g. John Smith"
+            required=""
           />
 
           <label for="contact-email">Email:</label>
@@ -78,6 +105,7 @@
             class="contact"
             id="contact-email"
             placeholder="e.g. johnsmith@gmail.com"
+            required=""
           />
 
           <label for="contact-phone">Phone:</label>
@@ -89,7 +117,6 @@
             placeholder="e.g. +44 908736194"
             pattern="[0-9\-]*"
             value=""
-            required=""
           />
 
           <label for="contact-message">Message:</label>
@@ -98,6 +125,7 @@
             class="contact"
             id="contact-message"
             placeholder="What would you like to tell us about?"
+            required=""
           ></textarea>
 
           <div>
