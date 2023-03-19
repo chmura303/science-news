@@ -313,7 +313,6 @@ select {
   gap: 1.25rem;
   grid-auto-columns: 1fr;
   grid-template-areas:
-    'zero'
     'one'
     'two'
     'three'
@@ -322,10 +321,6 @@ select {
 
   width: min(95%, 70rem);
   margin-inline: auto;
-}
-
-.zero {
-  grid-area: zero;
 }
 
 .one {
@@ -356,7 +351,7 @@ select {
   transition: 0.3s ease-in-out;
 }
 
-.article:not(:first-child):hover {
+.article:hover {
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
 }
@@ -525,7 +520,6 @@ select {
 
   .main-grid {
     grid-template-areas:
-      'zero zero'
       'one one'
       'two three'
       'five five'
@@ -542,7 +536,6 @@ select {
 @media screen and (min-width: 54em) {
   .main-grid {
     grid-template-areas:
-      'zero zero zero'
       'one one two'
       'five five five'
       'three four four';
@@ -552,7 +545,6 @@ select {
 @media screen and (min-width: 75em) {
   .main-grid {
     grid-template-areas:
-      'zero zero zero zero'
       'one one two five'
       'three four four five';
   }

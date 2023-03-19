@@ -447,7 +447,7 @@ label:where(:not(:first-of-type)) {
     background-image: url('./images/small-bacteria.png');
     background-repeat: no-repeat;
     background-size: 80%;
-    background-position: 95% 35%;
+    background-position: 95% 26%;
   }
 
   .logo-title {
