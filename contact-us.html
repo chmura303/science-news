@@ -87,12 +87,15 @@
           Any question or remarks? Just write us a message!
         </p>
 
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          action="https://formsubmit.io/send/454439de-5328-4bd3-bad7-e7681c4248f8"
+          method="POST"
+        >
           <label for="contact-name">Name:</label>
           <input
             type="text"
             name="contact-name"
-            class="cat"
             id="contact-name"
             placeholder="e.g. John Smith"
             required=""
@@ -114,7 +117,7 @@
             name="contact-phone"
             class="contact"
             id="contact-phone"
-            placeholder="e.g. +44 908736194"
+            placeholder="e.g. 908736194"
             pattern="[0-9\-]*"
             value=""
           />
@@ -127,6 +130,8 @@
             placeholder="What would you like to tell us about?"
             required=""
           ></textarea>
+
+          <input name="_formsubmit_id" type="text" style="display: none" />
 
           <div>
             <input
