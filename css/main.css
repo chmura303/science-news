@@ -371,6 +371,12 @@ select {
 /* Media              */
 /* ------------------ */
 
+@media (max-width: 22.5em) {
+  .social-legal {
+    display: block;
+  }
+}
+
 @media (max-width: 53.5em) {
   .logo-title {
     display: none;
@@ -425,13 +431,8 @@ select {
     aspect-ratio: 1 / 1;
   }
 
-  .article img {
-    margin-inline: auto;
-  }
-}
-
-@media (max-width: 22.5em) {
-  .social-legal {
-    display: block;
+  .index-img {
+    display: flex;
+    justify-content: center;
   }
 }
