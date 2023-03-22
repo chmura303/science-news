@@ -41,8 +41,9 @@
 
     <!-- Custom css -->
     <title>Sonic Hedgehog | Home</title>
-    <link rel="stylesheet" href="./index.css" />
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header class="header flex">
@@ -60,17 +61,24 @@
           role="list"
           aria-label="Main"
         >
-          <li class="current">
-            <a href="#">Home</a>
+          <li><a href="./index.html" class="hover-underline">Home</a></li>
+          <li>
+            <a href="./html/section-space.html" class="hover-underline"
+              >Space</a
+            >
           </li>
           <li>
-            <a href="./section-space.html" class="hover-underline">Space</a>
+            <a href="./html/section-nature.html" class="hover-underline"
+              >Nature</a
+            >
           </li>
           <li>
-            <a href="./section-nature.html" class="hover-underline">Nature</a>
+            <a href="./html/section-mind.html" class="hover-underline">Mind</a>
           </li>
           <li>
-            <a href="./section-mind.html" class="hover-underline">Mind</a>
+            <a href="./html/contact-us.html" class="hover-underline"
+              >Contact Us</a
+            >
           </li>
         </ul>
       </nav>
@@ -84,10 +92,10 @@
 
     <main class="main-grid">
       <article class="one article bg-primary-500 text-light-200">
-        <a href="./nature-article-killer-whale.html">
+        <a href="./html/article-nature-killerwhale.html">
           <div>
             <img
-              src="./images/small-killer-whale.jpg"
+              src="./images/small-killerwhale.jpg"
               alt="killer whale swimming together with its baby"
             />
           </div>
@@ -104,8 +112,8 @@
         </a>
       </article>
 
-      <article class="two article bg-primary-400 text-dark-800">
-        <a href="./space-article-rocket.html">
+      <article class="two article bg-secondary-400 text-dark-800">
+        <a href="./html/article-space-rocket.html">
           <div>
             <img
               src="./images/small-rocket.jpg"
@@ -127,7 +135,7 @@
       </article>
 
       <article class="three article bg-light-100">
-        <a href="./nature-article-cat.html">
+        <a href="./html/article-nature-cat.html">
           <div>
             <img
               src="./images/small-cat.jpg"
@@ -150,8 +158,8 @@
         </a>
       </article>
 
-      <article class="four article bg-secondary-400 text-dark-800">
-        <a href="./mind-article-test.html">
+      <article class="four article bg-secondary-500 text-dark-800">
+        <a href="./html/article-mind-test.html">
           <div>
             <img
               src="./images/small-test.jpg"
@@ -174,7 +182,7 @@
       </article>
 
       <article class="five article bg-light-100">
-        <a href="./space-article-moon.html">
+        <a href="./html/article-space-moon.html">
           <div>
             <img
               src="./images/small-moon.jpg"
@@ -203,42 +211,48 @@
       </article>
     </main>
 
-    <footer class="footer-grid text-dark-800">
-      <ul class="left social-media" role="list">
-        <li class="uppercase fw-700">Find us on social media</li>
-        <li>
-          <a href="#"
-            ><img
-              src="./images/instagram.png"
-              alt="instagram logo"
-            />&nbsp;Instagram</a
-          >
-        </li>
-        <li>
-          <a href="#"
-            ><img src="./images/facebook.png" alt="facebook logo" />
-            &nbsp;Facebook</a
-          >
-        </li>
-        <li>
-          <a href="#"
-            ><img src="./images/twitter.png" alt="twitter logo" />
-            &nbsp;Twitter</a
-          >
-        </li>
-      </ul>
+    <footer class="text-dark-800">
+      <div class="social-legal flex">
+        <figure>
+          <figcaption class="uppercase fw-700">Social media</figcaption>
+          <ul class="social-media" role="list">
+            <a href="#"
+              ><li>
+                <img
+                  src="../images/instagram.png"
+                  alt="instagram logo"
+                />&nbsp;Instagram
+              </li>
+            </a>
+            <a href="#"
+              ><li>
+                <img src="../images/facebook.png" alt="facebook logo" />
+                &nbsp;Facebook
+              </li>
+            </a>
+            <a href="#"
+              ><li>
+                <img src="../images/twitter.png" alt="twitter logo" />
+                &nbsp;Twitter
+              </li>
+            </a>
+          </ul>
+        </figure>
 
-      <ul class="right legal-and-privacy" role="list">
-        <li class="uppercase fw-700">Legal and privacy</li>
-        <li><a href="./contact-us.html">Contact us</a></li>
-        <li><a href="#">Privacy policy</a></li>
-        <li><a href="#">Cookies</a></li>
-      </ul>
+        <figure>
+          <figcaption class="uppercase fw-700">Legal and privacy</figcaption>
+          <ul class="legal-and-privacy" role="list">
+            <a href="#"><li>Privacy policy</li></a>
+            <a href="#"><li>Cookies</li></a>
+          </ul>
+        </figure>
+      </div>
 
-      <div class="bottom copyright text-dark-800">
-        <hr class="hr-single-01" />
-        &copy; Coleslaw 2023; Images by
-        <a href="https://www.pexels.com/">Pexels</a>; Icons by
+      <hr class="hr-single-01" />
+
+      <div class="copyright">
+        Copyright &copy; chmura303 2023 &bull; Images by
+        <a href="https://www.pexels.com/">Pexels</a> &bull; Icons by
         <a href="https://icons8.com/">Icons8</a>
       </div>
     </footer>

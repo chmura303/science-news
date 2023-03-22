@@ -1,0 +1,118 @@
+/* ------------------ */
+/* Components         */
+/* ------------------ */
+
+/* main */
+
+.main-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 'zero';
+
+  flex-grow: 1;
+  width: min(95%, 37.5rem);
+  margin-inline: auto;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.article {
+  background-color: transparent;
+}
+
+.contact {
+  border: 0;
+  padding: 0.25em;
+  border-radius: 0.4rem;
+}
+
+.article h1 {
+  padding-top: 1rem;
+  line-height: 2rem;
+  font-family: var(--ff-decorative);
+  text-align: center;
+}
+
+.article p:first-of-type {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+label:where(:not(:first-of-type)) {
+  padding-top: 1rem;
+}
+
+#contact-message {
+  width: 100%;
+  min-height: 12rem;
+}
+
+.btn-send-message {
+  margin-top: 2rem;
+  padding: 0.45rem 1.75rem;
+  border-radius: 30px;
+  border: 2px solid hsl(var(--clr-accent));
+  background: hsl(var(--clr-light-100));
+  color: hsl(var(--clr-accent));
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-send-message:hover {
+  background: hsl(var(--clr-accent));
+  color: hsl(var(--clr-light-100));
+}
+
+.btn-send-message:focus {
+  opacity: 0.65;
+}
+
+/* ------------------ */
+/* Media              */
+/* ------------------ */
+
+@media (max-width: 53.5em) {
+  body {
+    background-image: url('../images/small-bacteria.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 95% 26%;
+  }
+}
+
+@media screen and (min-width: 33em) {
+  .main-grid {
+    grid-template-areas: 'zero zero';
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  body {
+    background-image: url('../images/large-bacteria01.png');
+    background-repeat: no-repeat;
+    background-position: 120% 40%;
+    background-size: 50%;
+  }
+
+  .main-grid {
+    grid-template-areas: 'zero zero';
+  }
+
+  .article h1 {
+    padding-top: 1.5rem;
+    line-height: 2.875rem;
+    font-size: var(--fs-750);
+  }
+
+  .article p {
+    font-size: var(--fs-600);
+  }
+}
