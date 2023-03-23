@@ -4,6 +4,12 @@
 
 /* main */
 
+.article {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  box-shadow: hsl(var(--clr-dark-800) / 0.5) 2.5rem 3.75rem 3rem -3rem;
+}
+
 .main-grid {
   display: grid;
   align-content: baseline;
