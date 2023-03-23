@@ -34,11 +34,6 @@
   transition: 0.3s ease-in-out;
 }
 
-.article:hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
-}
-
 .article img {
   border-radius: 0.4rem;
   margin: 0 0.75rem 0 0;
