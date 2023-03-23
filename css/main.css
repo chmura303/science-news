@@ -5,6 +5,7 @@
 :root {
   --clr-light-100: 0 0% 100%;
   --clr-light-200: 300 100% 99%;
+  --clr-light-400: 300 2% 74%;
 
   --clr-dark-800: 30 11% 11%;
 
@@ -273,8 +274,8 @@ select {
   padding: 1rem;
   align-items: center;
   justify-content: space-between;
-
-  /* position: absolute; */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid hsl(var(--clr-light-200));
 }
 
 .navigation {
@@ -401,6 +402,18 @@ select {
   .logo-title02 {
     display: inline;
     line-height: 0.7rem;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    background: hsl(var(--clr-light-200));
+    z-index: 99999;
+    width: 100%;
+    
+    border-bottom: 1px solid hsl(var(--clr-light-400));
+    margin-bottom: 1rem;
+    line-height: 1.5;
   }
 
   .navigation {

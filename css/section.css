@@ -26,20 +26,20 @@
   grid-area: one;
 }
 
-.article {
-  padding: 0.5rem;
+.img-box {
+  float: left;
+  margin: 0 0.75rem 0 0;
+  max-width: 372px;
+  max-height: 245px;
   border-radius: 0.4rem;
-  box-shadow: hsl(var(--clr-dark-800) / 0.5) 2.5rem 3.75rem 3rem -3rem;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+
+  overflow: hidden;
 }
 
 .article img {
   border-radius: 0.4rem;
-  margin: 0 0.75rem 0 0;
 
-  width: 372px;
-  height: 245px;
+  width: 100%;
   transition: 0.25s all ease-in-out;
 }
 

@@ -81,10 +81,15 @@ label:where(:not(:first-of-type)) {
 
 @media (max-width: 53.5em) {
   body {
-    background-image: url('../images/small-bacteria.png');
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 95% 30%;
+    background: url('../images/small-bacteria.png') no-repeat;
+    background-position: 170px 30%;
+  }
+}
+
+@media (min-width: 53.5em) {
+  body {
+    background: url('../images/large-bacteria.png') no-repeat;
+    background-position: 95% 45%;
   }
 }
 
@@ -95,13 +100,6 @@ label:where(:not(:first-of-type)) {
 }
 
 @media screen and (min-width: 37.5em) {
-  body {
-    background-image: url('../images/large-bacteria01.png');
-    background-repeat: no-repeat;
-    background-position: 120% 40%;
-    background-size: 50%;
-  }
-
   .main-grid {
     grid-template-areas: 'zero zero';
   }
