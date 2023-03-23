@@ -265,6 +265,10 @@ select {
   opacity: 0.9;
 }
 
+.logo-title02 {
+  display: none;
+}
+
 .header {
   margin: 1rem 1rem;
   align-items: center;
@@ -380,6 +384,11 @@ select {
 @media (max-width: 53.5em) {
   .logo-title {
     display: none;
+  }
+
+  .logo-title02 {
+    display: inline;
+    line-height: 0.7rem;
   }
 
   .navigation {
