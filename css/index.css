@@ -49,8 +49,24 @@
   transition: 0.3s ease-in-out;
 }
 
+.index-img {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 0.4rem;
+
+  overflow: hidden;
+}
+
 .article img {
   border-radius: 0.4rem;
+
+  width: 100%;
+  transition: 0.25s all ease-in-out;
+}
+
+.article img:hover {
+  transform: scale(1.05);
 }
 
 .article p:first-of-type {

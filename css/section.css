@@ -37,6 +37,14 @@
 .article img {
   border-radius: 0.4rem;
   margin: 0 0.75rem 0 0;
+
+  width: 372px;
+  height: 245px;
+  transition: 0.25s all ease-in-out;
+}
+
+.article img:hover {
+  transform: scale(1.05);
 }
 
 .article p:first-of-type {
