@@ -93,7 +93,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 
-  background-color: hsl(var(--clr-light-200));
+  background-color: hsl(var(--clr-light-100));
   color: hsl(var(--clr-dark-800));
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
