@@ -347,7 +347,6 @@ figcaption {
 footer {
   background-color: hsl(var(--clr-light-300));
   margin-top: auto;
-  text-align: center;
   padding: 1.5em 2em 0;
 }
 
