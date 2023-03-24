@@ -12,14 +12,10 @@
 
 .main-grid {
   display: grid;
-  align-content: baseline;
   gap: 1.25rem;
-  grid-auto-columns: 1fr;
   grid-template-areas:
     'zero'
     'one';
-
-  flex-grow: 1;
   width: min(95%, 70rem);
   margin-inline: auto;
 }
@@ -33,6 +29,7 @@
 }
 
 .img-box {
+  display: flex;
   float: left;
   margin: 0 0.75rem 0 0;
   max-width: 372px;
@@ -82,14 +79,11 @@
 /* Media              */
 /* ------------------ */
 
-@media screen and (min-width: 36.25em) {
-  .main-grid {
-    grid-template-areas:
-      'zero zero'
-      'one one';
-  }
-
-  .article img {
-    float: left;
+@media screen and (max-width: 53.5em) {
+  .img-box {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 0.4rem;
+    float: none;
   }
 }

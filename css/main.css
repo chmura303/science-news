@@ -5,6 +5,7 @@
 :root {
   --clr-light-100: 0 0% 100%;
   --clr-light-200: 300 100% 99%;
+  --clr-light-300: 300 2% 84%;
   --clr-light-400: 300 2% 74%;
 
   --clr-dark-800: 30 11% 11%;
@@ -83,7 +84,7 @@ body {
   flex-direction: column;
 
   place-content: center;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin-inline: auto;
 
   overflow-x: hidden;
@@ -252,6 +253,10 @@ select {
 
 /* header */
 
+figcaption {
+  line-height: 0.75;
+}
+
 .logo img {
   max-width: 2.625rem;
   --gap: 0.1rem;
@@ -271,11 +276,13 @@ select {
 }
 
 .header {
-  padding: 1rem;
+  padding: 1em;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid hsl(var(--clr-light-200));
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid hsl(var(--clr-light-400));
+  z-index: 99999;
+
 }
 
 .navigation {
@@ -329,11 +336,23 @@ select {
   background: url(../images/close.png) no-repeat center;
 }
 
+/* main */
+.main-grid {
+  margin-bottom: 4rem;
+
+}
+
 /* footer */
 
+footer {
+  background-color: hsl(var(--clr-light-300));
+  margin-top: auto;
+  text-align: center;
+  padding: 1.5em 2em 0;
+}
+
 .social-legal {
-  padding: 3.5em 1em 0.5em;
-  justify-content: space-evenly;
+  justify-content: left;
 }
 
 .social-media li {
@@ -352,7 +371,7 @@ select {
 .social-media,
 .legal-and-privacy {
   padding: 0;
-  line-height: 2rem;
+  line-height: 1.75em;
 }
 
 .social-media a,
@@ -371,17 +390,13 @@ select {
 .copyright {
   text-align: center;
   padding: 1.5em 1em;
+  border-top: 1px hsl(var(--clr-dark-800)) solid;
 }
 
 .copyright a {
   text-decoration: none;
   opacity: 0.8;
   color: hsl(var(--clr-dark-800));
-}
-
-.hr-single-01 {
-  opacity: 0.4;
-  margin-inline: 1em;
 }
 
 /* ------------------ */
@@ -408,11 +423,7 @@ select {
     position: sticky;
     top: 0;
     background: hsl(var(--clr-light-200));
-    z-index: 99999;
-    width: 100%;
     
-    border-bottom: 1px solid hsl(var(--clr-light-400));
-    margin-bottom: 1rem;
     line-height: 1.5;
   }
 
@@ -441,8 +452,8 @@ select {
 
   .nav-toggle[aria-expanded='true'] {
     background: url(../images/close.png) no-repeat center;
-    filter: invert(100%);
     position: fixed right;
+    filter: invert(100%);
   }
 
   .hover-underline:hover:after {
