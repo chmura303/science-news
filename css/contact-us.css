@@ -89,7 +89,7 @@ label:where(:not(:first-of-type)) {
 @media (min-width: 53.5em) {
   body {
     background: url('../images/large-bacteria.png') no-repeat;
-    background-position: 95% 45%;
+    background-position: 95% 47%;
   }
 }
 

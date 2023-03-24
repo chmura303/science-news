@@ -421,7 +421,7 @@ footer {
   .header {
     position: sticky;
     top: 0;
-    background: hsl(var(--clr-light-200));
+    background: hsl(var(--clr-light-100));
     
     line-height: 1.5;
   }
