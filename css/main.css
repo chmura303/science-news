@@ -278,11 +278,10 @@ figcaption {
 .header {
   padding: 1em;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 1.5em;
   border-bottom: 1px solid hsl(var(--clr-light-400));
   z-index: 99999;
-
 }
 
 .navigation {
@@ -423,6 +422,7 @@ footer {
     top: 0;
     background: hsl(var(--clr-light-100));
     
+    justify-content: space-between;
     line-height: 1.5;
   }
 
